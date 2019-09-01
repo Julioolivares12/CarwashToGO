@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".RegistroActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/crear_cuenta"
+        android:backgroundTint="#47525E"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/edt_passwordR"
+        app:layout_constraintTop_toBottomOf="@+id/edt_passwordR" />
+
+    <Button
+        android:id="@+id/btnAbrirGaleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/abrir_galeria"
+        app:layout_constraintEnd_toEndOf="@+id/edt_passwordR"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toEndOf="@+id/btnCrear"
+        app:layout_constraintTop_toBottomOf="@+id/edt_passwordR"
+        android:backgroundTint="#47525E"
+        android:textColor="@android:color/white"
+        />
+
+    <EditText
+        android:id="@+id/edt_dui"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="DUI"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edt_codEmpleado"
+        app:layout_constraintStart_toStartOf="@+id/edt_codEmpleado"
+        app:layout_constraintTop_toBottomOf="@+id/edt_codEmpleado" />
+
+    <EditText
+        android:id="@+id/edt_fechaNac"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="fecha nacimiento"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/edt_dui"
+        app:layout_constraintStart_toStartOf="@+id/edt_dui"
+        app:layout_constraintTop_toBottomOf="@+id/edt_dui" />
+
+    <EditText
+        android:id="@+id/edt_cargo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="cargo en la empresa"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edt_fechaNac"
+        app:layout_constraintStart_toStartOf="@+id/edt_fechaNac"
+        app:layout_constraintTop_toBottomOf="@+id/edt_fechaNac" />
+
+    <EditText
+        android:id="@+id/edt_correoR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/correo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edt_cargo"
+        app:layout_constraintStart_toStartOf="@+id/edt_cargo"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cargo" />
+
+    <EditText
+        android:id="@+id/edt_passwordR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edt_correoR"
+        app:layout_constraintStart_toStartOf="@+id/edt_correoR"
+        app:layout_constraintTop_toBottomOf="@+id/edt_correoR" />
+
+    <EditText
+        android:id="@+id/edtNombre"
+        android:layout_width="383dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="148dp"
+        android:ems="10"
+        android:hint="nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_codEmpleado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="codigo empleado"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombre"
+        app:layout_constraintStart_toStartOf="@+id/edtNombre"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+</android.support.constraint.ConstraintLayout>
