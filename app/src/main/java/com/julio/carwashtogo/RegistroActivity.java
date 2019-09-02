@@ -73,7 +73,26 @@ public class RegistroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                registrarUserio(user);
+                String nombre = edtNombre.getText().toString();
+                String codEmpleado = edtCodEmpleado.getText().toString();
+                String dui = edtDui.getText().toString();
+                String fechaNac= edtFechaNac.getText().toString();
+                String cargo = edtCargoEmpresa.getText().toString();
+                String correo = edtCorreo.getText().toString();
+                String password = edtPassword.getText().toString();
+
+                //falta validar
+
+                //asignacion de valores para el objeto user se guardara en bd
+                user.setNombre(nombre);
+                user.setCodEmpleado(codEmpleado);
+                user.setDui(dui);
+                user.setFechaNac(fechaNac);
+                user.setCargo(cargo);
+                user.setCorreo(correo);
+                user.setPassword(password);
+
+                registrarUsuario(user);
             }
         });
 
@@ -103,7 +122,7 @@ public class RegistroActivity extends AppCompatActivity {
 
 
 
-    private void registrarUserio(final User user){
+    private void registrarUsuario(final User user){
         mAuth.createUserWithEmailAndPassword(user.getCorreo(),user.getPassword()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
