@@ -81,8 +81,8 @@ public class RegistroActivity extends AppCompatActivity {
                 String correo = edtCorreo.getText().toString();
                 String password = edtPassword.getText().toString();
 
-                //falta validar
-
+                //validaciones
+                
                 //asignacion de valores para el objeto user se guardara en bd
                 user.setNombre(nombre);
                 user.setCodEmpleado(codEmpleado);
@@ -91,7 +91,7 @@ public class RegistroActivity extends AppCompatActivity {
                 user.setCargo(cargo);
                 user.setCorreo(correo);
                 user.setPassword(password);
-
+                user.setRol("cliente");
                 registrarUsuario(user);
             }
         });

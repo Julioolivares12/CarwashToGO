@@ -17,9 +17,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.julio.carwashtogo.common.Constantes;
+
 public class PrincipalActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private Bundle datos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +42,30 @@ public class PrincipalActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
-                .setDrawerLayout(drawer)
-                .build();
+        //mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_tools, R.id.nav_share, R.id.nav_send).setDrawerLayout(drawer).build();
+
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        datos = getIntent().getExtras();
+        if (datos != null){
+            //hacer cambio de usuaio
+            String rol = datos.getString(Constantes.ROL_USER);
+            assert rol != null;
+            switch (rol){
+                case "cliente":
+
+                    break;
+                case "otro":
+
+                    break;
+                case "admnistrador":
+
+                    break;
+            }
+        }
     }
 
     @Override
