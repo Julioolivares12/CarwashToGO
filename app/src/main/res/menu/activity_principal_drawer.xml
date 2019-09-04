@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item android:title="@string/listarEmpresas"
+            android:id="@+id/nav_listar_empresas"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"/>
+        <item android:title="@string/nueva_empresa"
+            android:id="@+id/nav_crear_empresas"
+            android:icon="@drawable/ic_add_box_black_24dp"/>
+        <item android:title="@string/crear_promocion"
+            android:id="@+id/nav_agregar_promociones"
+            android:icon="@drawable/ic_add_black_24dp"/>
+        <item android:title="@string/agregar_encargado"
+            android:id="@+id/nav_nuevo_encargado"
+            android:icon="@drawable/ic_person_add_black_24dp"/>
+        <item android:title="@string/listar_encargados"
+            android:id="@+id/nav_lista_encargados"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"/>
 
+
+        <item android:title="@string/cuponera" android:id="@+id/nav_cuponera"/>
+        <item android:title="@string/add_vehiculo" android:id="@+id/nav_add_vehiculo"/>
+        <item android:title="@string/catalogo_de_productos" android:id="@+id/nav_catalogo_productos"/>
+        
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/communicate">
         <menu>
 
         </menu>

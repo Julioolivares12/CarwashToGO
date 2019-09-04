@@ -3,41 +3,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_listar_empresas">
+
+
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.julio.carwashtogo.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_listar_empresas"
+        android:name="com.julio.carwashtogo.ui.Administrador.ListarEmpresaFragment"
+        android:label="fragment_listar_empresa"
+        tools:layout="@layout/fragment_listar_empresa" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.julio.carwashtogo.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_crear_empresas"
+        android:name="com.julio.carwashtogo.ui.Administrador.NuevaEmpresaFragment"
+        android:label="fragment_nueva_empresa"
+        tools:layout="@layout/fragment_nueva_empresa" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.julio.carwashtogo.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
+        android:id="@+id/nav_lista_encargados"
+        android:name="com.julio.carwashtogo.ui.Administrador.ListarEncargadoFragment"
+        android:label="fragment_listar_encargado"
+        tools:layout="@layout/fragment_listar_encargado" />
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.julio.carwashtogo.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
+        android:id="@+id/nav_agregar_promociones"
+        android:name="com.julio.carwashtogo.ui.Administrador.CrearPromocionFragment"
+        android:label="fragment_crear_promocion"
+        tools:layout="@layout/fragment_crear_promocion" />
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.julio.carwashtogo.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
+        android:id="@+id/nav_nuevo_encargado"
+        android:name="com.julio.carwashtogo.ui.Administrador.NuevoEncargadoFragment"
+        android:label="fragment_nuevo_encargado"
+        tools:layout="@layout/fragment_nuevo_encargado" />
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.julio.carwashtogo.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/nav_perfilFragment"
+        android:name="com.julio.carwashtogo.ui.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/addVehiculoFragment"
+        android:name="com.julio.carwashtogo.ui.cliente.AddVehiculoFragment"
+        android:label="fragment_add_vehiculo"
+        tools:layout="@layout/fragment_add_vehiculo" />
+    <fragment
+        android:id="@+id/catalogoProductosFragment"
+        android:name="com.julio.carwashtogo.ui.cliente.CatalogoProductosFragment"
+        android:label="fragment_catalogo_productos"
+        tools:layout="@layout/fragment_catalogo_productos" />
+    <fragment
+        android:id="@+id/cuponeraFragment"
+        android:name="com.julio.carwashtogo.ui.cliente.CuponeraFragment"
+        android:label="fragment_cuponera"
+        tools:layout="@layout/fragment_cuponera" />
 </navigation>
