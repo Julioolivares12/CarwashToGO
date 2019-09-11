@@ -44,4 +44,9 @@
     <string name="cuponera">cuponera</string>
     <string name="add_vehiculo">add vehiculo</string>
     <string name="catalogo_de_productos">catalogo de productos</string>
+    <string name="nombre_de_empresa">Nombre de empresa</string>
+    <string name="encargado">Encargado</string>
+    <string name="ubicacion">ubicacion</string>
+    <string name="telefono">telefono</string>
+    <string name="seleccionar_nivel">Seleccionar nivel</string>
 </resources>

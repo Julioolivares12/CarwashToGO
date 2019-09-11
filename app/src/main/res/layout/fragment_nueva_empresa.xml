@@ -1,14 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Administrador.NuevaEmpresaFragment">
+    tools:context=".ui.Administrador.empresa.NuevaEmpresaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <Button
+                android:id="@+id/btnSubirlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/colorNegroBotones"
+                android:text="subir logo"
+
+                android:textColor="@android:color/white"
+
+                app:layout_constraintEnd_toStartOf="@+id/btnCrearEmpresa"
+                app:layout_constraintStart_toStartOf="@+id/spnNivel"
+                app:layout_constraintTop_toBottomOf="@+id/spnNivel" />
+
+            <Button
+                android:id="@+id/btnCrearEmpresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:backgroundTint="@color/colorNegroBotones"
+                android:text="guardar"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnNivel" />
+
+            <EditText
+                android:id="@+id/edtUbicacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="@string/ubicacion"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/edtEncargado"
+                app:layout_constraintStart_toStartOf="@+id/edtEncargado"
+                app:layout_constraintTop_toBottomOf="@+id/edtEncargado" />
+
+            <EditText
+                android:id="@+id/edtTelefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="@string/telefono"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@+id/edtUbicacion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtUbicacion" />
+
+            <EditText
+                android:id="@+id/edtNombreEmpresa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="@string/nombre_de_empresa"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/edtEncargado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="@string/encargado"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/edtNombreEmpresa"
+                app:layout_constraintStart_toStartOf="@+id/edtNombreEmpresa"
+                app:layout_constraintTop_toBottomOf="@+id/edtNombreEmpresa" />
+
+            <Spinner
+                android:id="@+id/spnNivel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/seleccionar_nivel"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/edtTelefono"
+                app:layout_constraintTop_toBottomOf="@+id/edtTelefono" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/nueva_empresa"
+                android:textSize="20sp"
+                app:fontFamily="sans-serif-black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>

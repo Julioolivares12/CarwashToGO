@@ -9,27 +9,27 @@
 
     <fragment
         android:id="@+id/nav_listar_empresas"
-        android:name="com.julio.carwashtogo.ui.Administrador.ListarEmpresaFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.empresa.ListarEmpresaFragment"
         android:label="fragment_listar_empresa"
         tools:layout="@layout/fragment_listar_empresa" />
     <fragment
         android:id="@+id/nav_crear_empresas"
-        android:name="com.julio.carwashtogo.ui.Administrador.NuevaEmpresaFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.empresa.NuevaEmpresaFragment"
         android:label="fragment_nueva_empresa"
         tools:layout="@layout/fragment_nueva_empresa" />
     <fragment
         android:id="@+id/nav_lista_encargados"
-        android:name="com.julio.carwashtogo.ui.Administrador.ListarEncargadoFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.encargado.ListarEncargadoFragment"
         android:label="fragment_listar_encargado"
         tools:layout="@layout/fragment_listar_encargado" />
     <fragment
         android:id="@+id/nav_agregar_promociones"
-        android:name="com.julio.carwashtogo.ui.Administrador.CrearPromocionFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.promocion.CrearPromocionFragment"
         android:label="fragment_crear_promocion"
         tools:layout="@layout/fragment_crear_promocion" />
     <fragment
         android:id="@+id/nav_nuevo_encargado"
-        android:name="com.julio.carwashtogo.ui.Administrador.NuevoEncargadoFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.encargado.ListarEncargadoFragment$NuevoEncargadoFragment"
         android:label="fragment_nuevo_encargado"
         tools:layout="@layout/fragment_nuevo_encargado" />
     <fragment

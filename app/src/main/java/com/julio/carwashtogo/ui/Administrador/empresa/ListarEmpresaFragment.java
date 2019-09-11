@@ -1,4 +1,4 @@
-package com.julio.carwashtogo.ui.Administrador;
+package com.julio.carwashtogo.ui.Administrador.empresa;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.julio.carwashtogo.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NuevoEncargadoFragment extends Fragment {
+public class ListarEmpresaFragment extends Fragment {
 
 
-    public NuevoEncargadoFragment() {
+    public ListarEmpresaFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class NuevoEncargadoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nuevo_encargado, container, false);
+        return inflater.inflate(R.layout.fragment_listar_empresa, container, false);
     }
 
 }
