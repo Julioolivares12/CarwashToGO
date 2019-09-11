@@ -1,6 +1,7 @@
 package com.julio.carwashtogo.model;
 
 public class Empresa {
+    private String Uid;
     private String nombreEmpresa;
     private String Encargado;
     private String Ubicacion;
@@ -12,13 +13,22 @@ public class Empresa {
     public Empresa() {
     }
 
-    public Empresa(String nombreEmpresa, String encargado, String ubicacion, String telefono, String nivel, String urlImagen) {
+    public Empresa(String nombreEmpresa, String encargado, String ubicacion, String telefono, String nivel, String urlImagen,String Uid) {
         this.nombreEmpresa = nombreEmpresa;
         Encargado = encargado;
         Ubicacion = ubicacion;
         Telefono = telefono;
         this.nivel = nivel;
         this.urlImagen = urlImagen;
+        this.Uid= Uid;
+    }
+
+    public String getUid() {
+        return Uid;
+    }
+
+    public void setUid(String uid) {
+        Uid = uid;
     }
 
     public String getNombreEmpresa() {

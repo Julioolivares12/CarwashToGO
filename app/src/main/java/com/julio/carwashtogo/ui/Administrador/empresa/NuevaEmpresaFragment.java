@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,10 +25,10 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.julio.carwashtogo.R;
-import com.julio.carwashtogo.common.UploadFotos;
+import com.julio.carwashtogo.common.Constantes;
 import com.julio.carwashtogo.model.Empresa;
 
-import java.io.StringReader;
+import java.util.UUID;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -44,9 +43,14 @@ public class NuevaEmpresaFragment extends Fragment {
     private Button btnSubirlogo,btnGuardar;
     public static final int REQUEST_GALERIA2=10;
     private Uri imagenSeleccionada;
+
+
+    //firebase
+    //----------------------------------------
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference refEmpresas = database.getReference("empresas");
     private StorageReference storageReference;
+    //-----------------------------------------
     private String nivel;
 
     Empresa empresa = new Empresa();
@@ -62,14 +66,14 @@ public class NuevaEmpresaFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_nueva_empresa, container, false);
 
-        edtNombreEmpresa = view.findViewById(R.id.edtNombreEmpresa);
-        edtEncagado = view.findViewById(R.id.edtEncargado);
-        edtUbicacion = view.findViewById(R.id.edtUbicacion);
-        edtTelefono = view.findViewById(R.id.edtTelefono);
+        edtNombreEmpresa = view.findViewById(R.id.edtNombreEmpresaActualizar);
+        edtEncagado = view.findViewById(R.id.edtEncargadoActualizar);
+        edtUbicacion = view.findViewById(R.id.edtUbicacionActualizar);
+        edtTelefono = view.findViewById(R.id.edtTelefonoActualizar);
 
-        spnNivel = view.findViewById(R.id.spnNivel);
-        btnSubirlogo = view.findViewById(R.id.btnSubirlogo);
-        btnGuardar= view.findViewById(R.id.btnCrearEmpresa);
+        spnNivel = view.findViewById(R.id.spnNivelActualizar);
+        btnSubirlogo = view.findViewById(R.id.btnActualizarEmpresalogo);
+        btnGuardar= view.findViewById(R.id.btnActualizarEmpresa);
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -104,6 +108,7 @@ public class NuevaEmpresaFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                String id = UUID.randomUUID().toString();
                 String nombreEmpresa = edtNombreEmpresa.getText().toString();
                 String encargado = edtEncagado.getText().toString();
                 String ubicacion = edtUbicacion.getText().toString();
@@ -144,13 +149,14 @@ public class NuevaEmpresaFragment extends Fragment {
     private void crearEmpresa(){
         String key =refEmpresas.push().getKey();
         assert key != null;
+        empresa.setUid(key);
         refEmpresas.child(key).setValue(empresa);
         subirFoto(key,imagenSeleccionada);
     }
 
     public void subirFoto(final String k, Uri uri){
         try {
-            final StorageReference storageR =storageReference.child("logos-empresas"+k+"."+ getFileExtension(uri));
+            final StorageReference storageR =storageReference.child(Constantes.LOGOS_EMPRESAS +k+"."+ getFileExtension(uri));
             storageR.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
