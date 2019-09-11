@@ -39,17 +39,17 @@
         tools:layout="@layout/fragment_perfil" />
     <fragment
         android:id="@+id/addVehiculoFragment"
-        android:name="com.julio.carwashtogo.ui.cliente.AddVehiculoFragment"
+        android:name="com.julio.carwashtogo.ui.cliente.vehiculo.AddVehiculoFragment"
         android:label="fragment_add_vehiculo"
         tools:layout="@layout/fragment_add_vehiculo" />
     <fragment
         android:id="@+id/catalogoProductosFragment"
-        android:name="com.julio.carwashtogo.ui.cliente.CatalogoProductosFragment"
+        android:name="com.julio.carwashtogo.ui.cliente.vehiculo.CatalogoProductosFragment"
         android:label="fragment_catalogo_productos"
         tools:layout="@layout/fragment_catalogo_productos" />
     <fragment
         android:id="@+id/cuponeraFragment"
-        android:name="com.julio.carwashtogo.ui.cliente.CuponeraFragment"
+        android:name="com.julio.carwashtogo.ui.cliente.cupon.CuponeraFragment"
         android:label="fragment_cuponera"
         tools:layout="@layout/fragment_cuponera" />
 </navigation>

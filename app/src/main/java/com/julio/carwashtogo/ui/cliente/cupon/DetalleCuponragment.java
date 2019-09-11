@@ -1,4 +1,4 @@
-package com.julio.carwashtogo.ui.cliente;
+package com.julio.carwashtogo.ui.cliente.cupon;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.julio.carwashtogo.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AddVehiculoFragment extends Fragment {
+public class DetalleCuponragment extends Fragment {
 
 
-    public AddVehiculoFragment() {
+    public DetalleCuponragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class AddVehiculoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_vehiculo, container, false);
+        return inflater.inflate(R.layout.fragment_detalle_cuponragment, container, false);
     }
 
 }
