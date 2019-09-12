@@ -24,7 +24,7 @@
 
         <item android:title="@string/cuponera" android:id="@+id/nav_cuponera"/>
         <item android:title="@string/add_vehiculo" android:id="@+id/nav_add_vehiculo"/>
-        <item android:title="@string/catalogo_de_productos" android:id="@+id/nav_catalogo_productos"/>
+        <item android:title="@string/catalogo_de_productos" android:icon="@drawable/ic_format_list_bulleted_black_24dp" android:id="@+id/nav_catalogo_productos"/>
         
     </group>
 

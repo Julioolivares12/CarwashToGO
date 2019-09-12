@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,28 +22,30 @@ public class MainActivity extends AppCompatActivity {
 
         tb_inicio = findViewById(R.id.tb_inicio);
         setSupportActionBar(tb_inicio);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_toolbar,menu);
-        final MenuItem item = menu.findItem(R.id.ic_login);
-        item.getActionView().setOnClickListener(new View.OnClickListener() {
+        tb_inicio.setTitle("");
+        Button toolbarLogin = findViewById(R.id.btnToolbarLogin);
+        Button toolbarRegistro = findViewById(R.id.btnToolbarRegistro);
+        toolbarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(intent);
             }
         });
-        final MenuItem resgistro = menu.findItem(R.id.ic_singin);
-        resgistro.getActionView().setOnClickListener(new View.OnClickListener() {
+        toolbarRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),RegistroActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_toolbar,menu);
         return super.onCreateOptionsMenu(menu);
     }
 }

@@ -76,6 +76,8 @@ public class PrincipalActivity extends AppCompatActivity {
                 menu.findItem(R.id.nav_crear_empresas).setVisible(false);
                 menu.findItem(R.id.nav_lista_encargados).setVisible(false);
                 menu.findItem(R.id.nav_nuevo_encargado).setVisible(false);
+                menu.findItem(R.id.nav_cuponera).setVisible(false);
+                menu.findItem(R.id.nav_add_vehiculo).setVisible(false);
 
                 //cliente activados
                 menu.findItem(R.id.nav_cuponera).setVisible(true);

@@ -6,7 +6,7 @@
     app:startDestination="@id/nav_listar_empresas">
 
 
-
+<!--inicio administrador-->
     <fragment
         android:id="@+id/nav_listar_empresas"
         android:name="com.julio.carwashtogo.ui.Administrador.empresa.ListarEmpresaFragment"
@@ -14,7 +14,7 @@
         tools:layout="@layout/fragment_listar_empresa" >
         <action
             android:id="@+id/action_nav_listar_empresas_to_editarEmpresaFragment"
-            app:destination="@id/editarEmpresaFragment"
+            app:destination="@id/nav_editarEmpresaFragment"
             app:enterAnim="@anim/nav_default_pop_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
@@ -35,16 +35,21 @@
         android:name="com.julio.carwashtogo.ui.Administrador.promocion.CrearPromocionFragment"
         android:label="fragment_crear_promocion"
         tools:layout="@layout/fragment_crear_promocion" />
+
     <fragment
-        android:id="@+id/nav_nuevo_encargado"
-        android:name="com.julio.carwashtogo.ui.Administrador.encargado.ListarEncargadoFragment"
+        android:id="@+id/nav_editarEmpresaFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.empresa.EditarEmpresaFragment"
+        android:label="fragment_editar_empresa"
+        tools:layout="@layout/fragment_editar_empresa" />
+    <fragment
+        android:id="@+id/nuevoEncargadoFragment"
+        android:name="com.julio.carwashtogo.ui.Administrador.encargado.NuevoEncargadoFragment"
         android:label="fragment_nuevo_encargado"
         tools:layout="@layout/fragment_nuevo_encargado" />
-    <fragment
-        android:id="@+id/nav_perfilFragment"
-        android:name="com.julio.carwashtogo.ui.PerfilFragment"
-        android:label="fragment_perfil"
-        tools:layout="@layout/fragment_perfil" />
+
+    <!--fin administrador-->
+    <!--inicio cliente-->
+
     <fragment
         android:id="@+id/addVehiculoFragment"
         android:name="com.julio.carwashtogo.ui.cliente.vehiculo.AddVehiculoFragment"
@@ -60,16 +65,7 @@
         android:name="com.julio.carwashtogo.ui.cliente.cupon.CuponeraFragment"
         android:label="fragment_cuponera"
         tools:layout="@layout/fragment_cuponera" />
-    <fragment
-        android:id="@+id/nav_editarEmpresaFragment"
-        android:name="com.julio.carwashtogo.ui.Administrador.empresa.EditarEmpresaFragment"
-        android:label="fragment_editar_empresa"
-        tools:layout="@layout/fragment_editar_empresa" />
-    <fragment
-        android:id="@+id/nuevoEncargadoFragment"
-        android:name="com.julio.carwashtogo.ui.Administrador.encargado.NuevoEncargadoFragment"
-        android:label="fragment_nuevo_encargado"
-        tools:layout="@layout/fragment_nuevo_encargado" />
+
     <fragment
         android:id="@+id/detalleCuponragment"
         android:name="com.julio.carwashtogo.ui.cliente.cupon.DetalleCuponragment"
@@ -80,4 +76,15 @@
         android:name="com.julio.carwashtogo.ui.cliente.catalogo.DetalleProductoFragment"
         android:label="fragment_detalle_producto"
         tools:layout="@layout/fragment_detalle_producto" />
+    <!--fin cliente-->
+
+
+
+    <!--opcion todos los usuarios-->
+    <fragment
+        android:id="@+id/nav_perfilFragment"
+        android:name="com.julio.carwashtogo.ui.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <!--fin opcion todos los usuarios-->
 </navigation>
